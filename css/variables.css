@@ -1,0 +1,25 @@
+:root {
+  color-scheme: light;
+  --navy: #082447;
+  --navy-deep: #050b16;
+  --blue: #2474f5;
+  --blue-soft: #9cadc7;
+  --off-white: #f7f6f2;
+  --white: #ffffff;
+  --text: #102846;
+  --muted: #69798d;
+  --border: #dce4ed;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --container: 82rem;
+  --gutter: clamp(1.25rem, 4.5vw, 5rem);
+  --header-height: 6rem;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --radius: .25rem;
+  --transition: 180ms ease;
+}

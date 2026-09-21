@@ -1,19 +1,64 @@
-<h1 align="center">Hi 👋, I'm Woo seoyoon</h1>
-<h3 align="center">BackEnd Dev</h3>
+# Mukhiddin Solijonov — Portfolio
 
-- 🌱 I’m currently learning **React,Selenium**
+An original static portfolio for a **Full-Stack · DevOps · Agentic Engineer** based in **Gyeonggi-do · South Korea**.
 
-- 👨‍💻 All of my projects are available at [https://www90kr.github.io/homepage/](https://www90kr.github.io/homepage/)
+## Phase 4 scope
 
-- 📝 I regularly write articles on [https://woosy.tistory.com](https://woosy.tistory.com)
+Responsive navigation, Home/hero, global design tokens, framed portrait photography, About, Technical Stack, and the PawPal project case study. Built with semantic HTML, CSS Grid/Flexbox, and one vanilla JavaScript module. No external fonts, scripts, frameworks, packages, or build step.
 
-- 💬 Ask me about **Java**
+Venturo, Enginx, Experience, Education, and Contact are intentionally not built. Their navigation destinations remain reserved where applicable. The active-navigation indicator style is prepared; scroll tracking is deferred until more sections exist.
 
-- 📫 How to reach me **www90kr@gmail.com**
+The original implementation and its assets are retained only in Git history (initial commit `09a8ca9`).
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-</p>
+## Run locally
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.oracle.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> <a href="https://unity.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="40" height="40"/> </a> </p>
+From the project directory:
+
+```sh
+python3 -m http.server 8000
+```
+
+Open http://localhost:8000. Stop the server with Ctrl+C. Use an HTTP server rather than opening the file directly so the JavaScript module loads consistently.
+
+## Files
+
+- `index.html`: metadata, navigation, hero, About, Technical Stack, and PawPal case-study content.
+- `css/variables.css`: palette, typography, spacing, sizing tokens.
+- `css/base.css`: reset, accessibility, base styles, reduced motion.
+- `css/components.css`: navigation, buttons, hero, portraits, About, Expertise, and PawPal case-study layouts.
+- `css/responsive.css`: tablet/mobile rules; navigation collapses at 1024px, hero stacks below 768px.
+- `js/main.js`: mobile menu and scroll-dependent header state.
+- `images/profile/`: hero portrait and About working portrait.
+- `images/projects/`: original project screenshots and reserved media locations.
+- `assets/resume/`: linked resume PDF.
+
+## Real assets
+
+Supply these files with the exact case-sensitive names:
+
+- `images/profile/mukhiddin-hero.webp`: loaded by the hero with meaningful alt text. A reserved 4:5 frame prevents image-driven layout shift; `object-fit: contain` preserves the entire portrait without distortion or face/shoulder cropping. Desktop width is capped at 400px; mobile width at 384px.
+- `images/profile/mukhiddin-about.webp`: displayed in the About section with meaningful alt text and a reserved square frame.
+- `assets/resume/Mukhiddin-Solijonov-Resume.pdf`: the enabled resume link opens this PDF in a new tab with `noopener noreferrer`. It deliberately leaves saving to the browser PDF viewer instead of relying on a forced download.
+
+All three files are present. The hero preserves the supplied 1103 × 1426 portrait crop, while the square About image uses a restrained rectangular frame and centered cover crop. Both supplied `.webp` files contain PNG-encoded data despite their filenames. Browsers currently decode both images successfully; the original assets have been left unchanged.
+
+### PawPal media
+
+- `images/projects/pawpal/pawpal-ai.webp`: displayed in the AI assistant feature.
+- `images/projects/pawpal/pawpal-admin.webp`: displayed in the admin operations feature.
+- `images/projects/pawpal/pawpal-home.png`: displayed as the dominant project overview visual.
+- `images/projects/pawpal/pawpal-services.webp`: available but unused in this phase.
+
+The supplied PawPal files with `.webp` extensions currently contain PNG-encoded image data. Browsers decode the used assets successfully; the originals remain unchanged.
+
+The final public portfolio URL and an original social-preview image are still needed for `og:url` and `og:image`; their placeholders remain HTML comments.
+
+## Confirmed links
+
+- GitHub: https://github.com/Max-Mukhiddin
+- Email: mukhiddinsolijonov101@gmail.com
+- PawPal live product: https://pawpall.online
+
+## Deployment
+
+Serve the repository root as a static site. Styles and scripts use relative URLs for compatibility with GitHub Pages project paths. No backend or contact integration is included. GitHub Pages publishing settings have not been changed.
