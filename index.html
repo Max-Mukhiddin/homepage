@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#082447">
+  <meta name="theme-color" content="#151a20">
   <title>Mukhiddin Solijonov | Full-Stack, DevOps &amp; Agentic Engineer</title>
   <meta name="description" content="Portfolio of Mukhiddin Solijonov, a Full-Stack, DevOps and Agentic Engineer based in South Korea, building production-ready web, infrastructure and AI-integrated systems.">
   <meta property="og:type" content="website">
@@ -11,24 +11,41 @@
   <meta property="og:site_name" content="Mukhiddin Solijonov">
   <meta property="og:title" content="Mukhiddin Solijonov | Full-Stack, DevOps &amp; Agentic Engineer">
   <meta property="og:description" content="Building production-ready products across web, infrastructure, and AI. Based in South Korea.">
-  <!-- Add og:url and og:image when the deployment URL and original social image are ready. -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <script type="module" src="js/main.js"></script>
+  <!-- Add canonical, og:url, and absolute og:image once the GitHub Pages URL and social image are ready. -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/variables.css?v=2">
+  <link rel="stylesheet" href="css/base.css?v=9">
+  <link rel="stylesheet" href="css/components.css?v=16">
+  <link rel="stylesheet" href="css/responsive.css?v=15">
+  <script type="module" src="js/main.js?v=14"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" data-header>
-    <nav class="navigation container" aria-label="Main navigation">
+  <div class="portfolio-shell">
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-topbar">
       <a class="logo" href="#home" aria-label="Mukhiddin Solijonov — home">&lt;MS<span>/</span>&gt;</a>
       <button class="menu-toggle" type="button" aria-controls="navigation-links" aria-expanded="false" aria-label="Open navigation" hidden>
         <span class="menu-toggle__lines" aria-hidden="true"></span>
       </button>
-      <div class="navigation-links" id="navigation-links">
-        <!-- Section destinations are reserved for later phases; no placeholder sections are rendered. -->
+    </div>
+
+    <div class="sidebar-panel" id="navigation-links">
+      <div class="sidebar-profile">
+        <a class="sidebar-portrait" href="#home" aria-label="Go to Home">
+          <img src="images/profile/mukhiddin-hero.webp"
+            alt="Mukhiddin Solijonov, Full-Stack, DevOps and Agentic Engineer"
+            width="1103" height="1426" fetchpriority="high" decoding="async">
+        </a>
+        <div class="sidebar-identity">
+          <p class="sidebar-name">Mukhiddin Solijonov</p>
+          <p class="sidebar-role">Full-Stack · DevOps · Agentic Engineer</p>
+        </div>
+      </div>
+
+      <nav class="navigation" aria-label="Main navigation">
         <ul class="navigation-list">
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#expertise">Expertise</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -36,12 +53,19 @@
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="navigation-github" href="https://github.com/Max-Mukhiddin" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
-      </div>
-    </nav>
-  </header>
+      </nav>
 
-  <main id="main" tabindex="-1">
+      <footer class="sidebar-footer">
+        <div class="sidebar-links">
+          <a href="https://github.com/Max-Mukhiddin" target="_blank" rel="noopener noreferrer">GitHub <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a href="assets/resume/Mukhiddin-Solijonov-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (PDF, opens in a new tab)</span></a>
+        </div>
+        <p class="sidebar-location"><span aria-hidden="true"></span>Gyeonggi-do · South Korea</p>
+      </footer>
+    </div>
+  </aside>
+
+  <main class="portfolio-content" id="main" tabindex="-1">
     <section class="hero container" id="home" aria-labelledby="hero-title">
       <div class="hero-content">
         <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Portfolio 2026</p>
@@ -50,63 +74,57 @@
         <p class="hero-statement">Building production-ready products across web, infrastructure, and AI.</p>
         <p class="hero-description">I design and build modern applications from frontend and backend architecture through deployment and AI-assisted workflows.</p>
         <div class="hero-actions">
-          <a class="button button--primary" href="#projects">View projects <span aria-hidden="true">↗</span></a>
-          <a class="button button--secondary" href="assets/resume/Mukhiddin-Solijonov-Resume.pdf" target="_blank" rel="noopener noreferrer">Download resume <span aria-hidden="true">↗</span><span class="visually-hidden"> (PDF, opens in a new tab)</span></a>
+          <a class="button button--primary" href="#projects">View projects <span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="button button--secondary" href="assets/resume/Mukhiddin-Solijonov-Resume.pdf" target="_blank" rel="noopener noreferrer">Download resume <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (PDF, opens in a new tab)</span></a>
         </div>
         <div class="hero-links" aria-label="Connect with Mukhiddin">
-          <a href="https://github.com/Max-Mukhiddin" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
-          <a href="mailto:mukhiddinsolijonov101@gmail.com">Email <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Max-Mukhiddin" target="_blank" rel="noopener noreferrer">GitHub <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a href="mailto:mukhiddinsolijonov101@gmail.com">Email <span class="link-arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
 
-      <figure class="portrait">
-        <div class="portrait-frame">
-          <img class="portrait-image" src="images/profile/mukhiddin-hero.webp"
-            alt="Mukhiddin Solijonov, Full-Stack, DevOps and Agentic Engineer"
-            width="1103" height="1426" fetchpriority="high" decoding="async">
-        </div>
-        <figcaption><span class="location-dot" aria-hidden="true"></span>Gyeonggi-do · South Korea<span class="location-code" aria-hidden="true">KR</span></figcaption>
-      </figure>
       <div class="hero-baseline" aria-hidden="true"><span>Web / Infrastructure / AI</span><span>01 — Home</span></div>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title" tabindex="-1">
       <div class="about-layout container">
-        <figure class="about-visual">
-          <div class="about-image-frame">
-            <img class="about-image" src="images/profile/mukhiddin-about.webp"
-              alt="Mukhiddin Solijonov working on a laptop at a desk"
-              width="1254" height="1254" loading="lazy" decoding="async">
-          </div>
-          <figcaption>Focused on thoughtful systems and dependable delivery.</figcaption>
-        </figure>
-
-        <div class="about-content">
-          <header class="about-header">
-            <p class="section-eyebrow"><span aria-hidden="true">02</span>About</p>
-            <h2 id="about-title">About me</h2>
-            <p class="about-lead">From Uzbekistan to <strong>South Korea</strong> — building a long-term career in software engineering, infrastructure, and AI.</p>
-          </header>
-
-          <dl class="about-metadata" aria-label="Profile details">
-            <div>
-              <dt>Nickname</dt>
-              <dd>Max</dd>
+        <div class="about-main">
+          <figure class="about-visual">
+            <div class="about-image-frame">
+              <img class="about-image" src="images/profile/mukhiddin-about.webp"
+                alt="Mukhiddin Solijonov working on a laptop at a desk"
+                width="1254" height="1254" loading="lazy" decoding="async">
             </div>
-            <div>
-              <dt>Date of birth</dt>
-              <dd><time datetime="2001-06-04">2001.06.04</time></dd>
-            </div>
-            <div>
-              <dt>GitHub</dt>
-              <dd><a href="https://github.com/Max-Mukhiddin" target="_blank" rel="noopener noreferrer">github.com/Max-Mukhiddin <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a></dd>
-            </div>
-          </dl>
+            <figcaption>Focused on thoughtful systems and dependable delivery.</figcaption>
+          </figure>
 
-          <div class="about-story">
-            <p>I came to South Korea from Uzbekistan to continue my education and build a long-term career in technology. My interest in problem-solving started early through mathematics and regional competitions, which developed the analytical and disciplined way I approach technical challenges today.</p>
-            <p>While completing my M.S. in AI Business Engineering at Seoul Media Institute of Technology, I moved deeper into software engineering and began building full-stack products across frontend, backend, databases, deployment, and AI-integrated features. Over time, my focus expanded from simply writing applications to understanding how reliable products are designed, deployed, secured, and maintained in production.</p>
-            <p>Today, I work across <strong>Full-Stack Development</strong>, <strong>DevOps</strong>, and <strong>Agentic Engineering</strong>. I enjoy learning quickly, taking ownership, collaborating with people from different backgrounds, and turning complex requirements into practical products. My goal is to continue growing as an engineer in South Korea and contribute to a team where I can take on real responsibility and build software that creates measurable value.</p>
+          <div class="about-content">
+            <header class="about-header">
+              <p class="section-eyebrow"><span aria-hidden="true">02</span>About</p>
+              <h2 id="about-title">About me</h2>
+              <p class="about-lead">From Uzbekistan to <strong>South Korea</strong> — building a long-term career in software engineering, infrastructure, and AI.</p>
+            </header>
+
+            <dl class="about-metadata" aria-label="Profile details">
+              <div>
+                <dt>Nickname</dt>
+                <dd>Max</dd>
+              </div>
+              <div>
+                <dt>Date of birth</dt>
+                <dd><time datetime="2001-06-04">2001.06.04</time></dd>
+              </div>
+              <div>
+                <dt>GitHub</dt>
+                <dd><a href="https://github.com/Max-Mukhiddin" target="_blank" rel="noopener noreferrer">github.com/Max-Mukhiddin <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a></dd>
+              </div>
+            </dl>
+
+            <div class="about-story">
+              <p>I came to South Korea from Uzbekistan to continue my education and build a long-term career in technology. My interest in problem-solving started early through mathematics and regional competitions, which developed the analytical and disciplined way I approach technical challenges today.</p>
+              <p>While completing my M.S. in AI Business Engineering at Seoul Media Institute of Technology, I moved deeper into software engineering and began building full-stack products across frontend, backend, databases, deployment, and AI-integrated features. Over time, my focus expanded from simply writing applications to understanding how reliable products are designed, deployed, secured, and maintained in production.</p>
+              <p>Today, I work across <strong>Full-Stack Development</strong>, <strong>DevOps</strong>, and <strong>Agentic Engineering</strong>. I enjoy learning quickly, taking ownership, collaborating with people from different backgrounds, and turning complex requirements into practical products. My goal is to continue growing as an engineer in South Korea and contribute to a team where I can take on real responsibility and build software that creates measurable value.</p>
+            </div>
           </div>
         </div>
 
@@ -157,19 +175,19 @@
               </div>
             </div>
             <ul class="technology-list" aria-label="Frontend technologies">
-              <li>React</li>
-              <li>Next.js</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>Redux Toolkit</li>
-              <li>Material UI</li>
-              <li>Styled Components</li>
-              <li>SCSS</li>
-              <li>EJS</li>
-              <li>jQuery</li>
-              <li>Bootstrap</li>
-              <li>Axios</li>
-              <li>Apollo Client</li>
+              <li class="tech-tag" tabindex="0">React</li>
+              <li class="tech-tag" tabindex="0">Next.js</li>
+              <li class="tech-tag" tabindex="0">TypeScript</li>
+              <li class="tech-tag" tabindex="0">JavaScript</li>
+              <li class="tech-tag" tabindex="0">Redux Toolkit</li>
+              <li class="tech-tag" tabindex="0">Material UI</li>
+              <li class="tech-tag" tabindex="0">Styled Components</li>
+              <li class="tech-tag" tabindex="0">SCSS</li>
+              <li class="tech-tag" tabindex="0">EJS</li>
+              <li class="tech-tag" tabindex="0">jQuery</li>
+              <li class="tech-tag" tabindex="0">Bootstrap</li>
+              <li class="tech-tag" tabindex="0">Axios</li>
+              <li class="tech-tag" tabindex="0">Apollo Client</li>
             </ul>
           </article>
 
@@ -182,18 +200,18 @@
               </div>
             </div>
             <ul class="technology-list" aria-label="Backend and data technologies">
-              <li>Node.js</li>
-              <li>NestJS</li>
-              <li>Express.js</li>
-              <li>GraphQL</li>
-              <li>REST API</li>
-              <li>MongoDB</li>
-              <li>MongoDB Atlas</li>
-              <li>Mongoose</li>
-              <li>JWT</li>
-              <li>bcrypt</li>
-              <li>Multer</li>
-              <li>Socket.IO</li>
+              <li class="tech-tag" tabindex="0">Node.js</li>
+              <li class="tech-tag" tabindex="0">NestJS</li>
+              <li class="tech-tag" tabindex="0">Express.js</li>
+              <li class="tech-tag" tabindex="0">GraphQL</li>
+              <li class="tech-tag" tabindex="0">REST API</li>
+              <li class="tech-tag" tabindex="0">MongoDB</li>
+              <li class="tech-tag" tabindex="0">MongoDB Atlas</li>
+              <li class="tech-tag" tabindex="0">Mongoose</li>
+              <li class="tech-tag" tabindex="0">JWT</li>
+              <li class="tech-tag" tabindex="0">bcrypt</li>
+              <li class="tech-tag" tabindex="0">Multer</li>
+              <li class="tech-tag" tabindex="0">Socket.IO</li>
             </ul>
           </article>
 
@@ -206,15 +224,15 @@
               </div>
             </div>
             <ul class="technology-list" aria-label="DevOps and systems technologies">
-              <li>Docker</li>
-              <li>Docker Compose</li>
-              <li>nginx</li>
-              <li>PM2</li>
-              <li>Linux</li>
-              <li>Ubuntu</li>
-              <li>VPS Deployment</li>
-              <li>Git</li>
-              <li>GitHub</li>
+              <li class="tech-tag" tabindex="0">Docker</li>
+              <li class="tech-tag" tabindex="0">Docker Compose</li>
+              <li class="tech-tag" tabindex="0">nginx</li>
+              <li class="tech-tag" tabindex="0">PM2</li>
+              <li class="tech-tag" tabindex="0">Linux</li>
+              <li class="tech-tag" tabindex="0">Ubuntu</li>
+              <li class="tech-tag" tabindex="0">VPS Deployment</li>
+              <li class="tech-tag" tabindex="0">Git</li>
+              <li class="tech-tag" tabindex="0">GitHub</li>
             </ul>
           </article>
 
@@ -227,17 +245,17 @@
               </div>
             </div>
             <ul class="technology-list" aria-label="AI and agentic technologies">
-              <li>Python</li>
-              <li>Pandas</li>
-              <li>Orange3</li>
-              <li>Deep Learning</li>
-              <li>NLP</li>
-              <li>Transformer Models</li>
-              <li>OpenAI API</li>
-              <li>Cursor</li>
-              <li>Codex</li>
-              <li>AI-assisted Development</li>
-              <li>Unity3D</li>
+              <li class="tech-tag" tabindex="0">Python</li>
+              <li class="tech-tag" tabindex="0">Pandas</li>
+              <li class="tech-tag" tabindex="0">Orange3</li>
+              <li class="tech-tag" tabindex="0">Deep Learning</li>
+              <li class="tech-tag" tabindex="0">NLP</li>
+              <li class="tech-tag" tabindex="0">Transformer Models</li>
+              <li class="tech-tag" tabindex="0">OpenAI API</li>
+              <li class="tech-tag" tabindex="0">Cursor</li>
+              <li class="tech-tag" tabindex="0">Codex</li>
+              <li class="tech-tag" tabindex="0">AI-assisted Development</li>
+              <li class="tech-tag" tabindex="0">Unity3D</li>
             </ul>
           </article>
         </div>
@@ -249,135 +267,76 @@
       </div>
     </section>
 
-    <section class="projects" id="projects" aria-labelledby="pawpal-title" tabindex="-1">
-      <article class="pawpal-case-study">
-        <header class="project-header container">
+    <section class="projects" id="projects" aria-label="Projects" tabindex="-1">
+      <article class="pawpal-case-study" aria-labelledby="pawpal-title">
+        <header class="pawpal-intro container">
           <p class="section-eyebrow"><span aria-hidden="true">04</span>Projects</p>
-          <div class="project-title-row">
-            <div>
-              <p class="project-identifier"><span>01</span>Flagship project</p>
-              <h2 id="pawpal-title">PawPal</h2>
-              <p class="project-subtitle">Pet Care Services &amp; Products Marketplace</p>
-            </div>
-            <div class="project-links" aria-label="PawPal project links">
-              <a class="project-link" href="https://pawpall.online" target="_blank" rel="noopener noreferrer">Live product <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
-              <span class="project-link project-link--disabled" aria-disabled="true">GitHub <span aria-hidden="true">↗</span><small>Repository link pending</small></span>
-            </div>
+          <p class="project-identifier"><span>01</span>Flagship project</p>
+          <h2 id="pawpal-title">PawPal</h2>
+          <p class="project-subtitle">Pet Care Services &amp; Products Marketplace</p>
+          <p class="pawpal-intro__summary">A full-stack pet-care marketplace connecting pet owners with specialists, services, products, bookings, community features, and AI-assisted support in one platform.</p>
+          <div class="project-links" aria-label="PawPal project links">
+            <a class="project-link" href="https://pawpall.online" target="_blank" rel="noopener noreferrer">Live product <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+            <span class="project-link project-link--disabled" aria-disabled="true">GitHub <small>Private / pending</small></span>
           </div>
+          <figure class="project-browser pawpal-intro__visual">
+            <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>pawpall.online</b></div>
+            <a class="project-image-link" href="https://pawpall.online" target="_blank" rel="noopener noreferrer" aria-label="View PawPal live website (opens in a new tab)">
+              <img src="images/projects/pawpal/pawpal-home.png" alt="PawPal pet-care marketplace homepage" width="2880" height="1800" loading="lazy" decoding="async">
+              <span class="project-image-overlay" aria-hidden="true">
+                <strong>PawPal</strong>
+                <span>Pet Care Marketplace</span>
+                <span class="project-image-overlay__stack">Next.js · NestJS · GraphQL · MongoDB</span>
+                <span class="project-image-overlay__cta">View Project <span class="link-arrow">↗</span></span>
+              </span>
+            </a>
+          </figure>
+          <dl class="pawpal-intro__metadata">
+            <div><dt>Role</dt><dd>Full-Stack Development</dd></div>
+            <div><dt>Scope</dt><dd>Frontend · Backend · Data · Deployment</dd></div>
+          </dl>
         </header>
 
-        <div class="project-overview container">
-          <div class="project-overview__copy">
-            <p class="project-summary">A full-stack pet-care marketplace connecting pet owners with specialists, services, products, bookings, community features, and AI-assisted support in one platform.</p>
-            <dl class="project-metadata">
-              <div>
-                <dt>Role</dt>
-                <dd>Full-Stack Development</dd>
-              </div>
-              <div>
-                <dt>Scope</dt>
-                <dd>Frontend · Backend · Data · Deployment</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>User · Specialist · Admin</dd>
-              </div>
-            </dl>
-          </div>
-          <figure class="project-browser">
-            <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>pawpall.online</b></div>
-            <img src="images/projects/pawpal/pawpal-home.png" alt="PawPal pet-care marketplace homepage" width="2880" height="1800" decoding="async">
-          </figure>
-        </div>
-
-        <section class="project-stack container" aria-labelledby="pawpal-stack-title">
-          <div class="project-subsection-heading">
-            <p>Build system</p>
-            <h3 id="pawpal-stack-title">Verified technology stack</h3>
-          </div>
-          <dl class="pawpal-stack">
+        <section class="pawpal-technology container" aria-labelledby="pawpal-technology-title">
+          <h3 id="pawpal-technology-title">Technology</h3>
+          <dl class="pawpal-technology__grid">
             <div><dt>Frontend</dt><dd>Next.js 14 · React · TypeScript · Apollo Client</dd></div>
             <div><dt>Backend</dt><dd>NestJS · GraphQL · Mongoose</dd></div>
             <div><dt>Data</dt><dd>MongoDB Atlas</dd></div>
-            <div><dt>Infrastructure</dt><dd>Docker Compose · nginx · Ubuntu 22.04 · Hostinger VPS</dd></div>
-            <div><dt>Additional</dt><dd>Scheduled PawPal batch service</dd></div>
+            <div><dt>Infrastructure</dt><dd>Docker Compose · nginx · Ubuntu · Hostinger VPS</dd></div>
           </dl>
+          <p class="pawpal-technology__note">Scheduled batch service</p>
         </section>
 
-        <section class="project-features container" aria-labelledby="pawpal-features-title">
-          <div class="project-subsection-heading">
-            <p>Product system</p>
-            <h3 id="pawpal-features-title">Core product features</h3>
-          </div>
-          <div class="project-feature-grid">
+        <section class="pawpal-features container" aria-labelledby="pawpal-features-title">
+          <h3 id="pawpal-features-title">Key features</h3>
+          <div class="pawpal-feature-grid">
             <article>
               <span>01</span>
               <h4>Dual marketplace</h4>
-              <strong>Products + Services</strong>
-              <p>Pet products and specialist services coexist in one marketplace experience.</p>
+              <p>Products + Services</p>
             </article>
             <article>
               <span>02</span>
               <h4>Booking workflow</h4>
-              <strong>Requested → Confirmed / Cancelled → Done</strong>
-              <p>Service bookings follow a clear lifecycle between customers and specialists.</p>
+              <p>Requested → Confirmed / Cancelled → Done</p>
             </article>
             <article>
               <span>03</span>
               <h4>Role-based access</h4>
-              <strong>User · Specialist · Admin</strong>
-              <p>Each role receives the permissions and tools required for its responsibilities.</p>
+              <p>User · Specialist · Admin</p>
             </article>
             <article>
               <span>04</span>
-              <h4>Multilingual UI</h4>
-              <strong>English · Korean · Russian</strong>
-              <p>The interface supports three languages across the platform.</p>
+              <h4>AI assistant</h4>
+              <p>OpenAI-powered contextual support</p>
             </article>
-          </div>
-        </section>
-
-        <section class="project-highlight project-highlight--ai" aria-labelledby="pawpal-ai-title">
-          <div class="project-highlight__inner container">
-            <div class="project-highlight__copy">
-              <p>Integrated intelligence</p>
-              <h3 id="pawpal-ai-title">AI assistant</h3>
-              <strong>Powered by OpenAI API</strong>
-              <p>Contextual PawPal and pet-care guidance directly inside the platform.</p>
-            </div>
-            <figure class="project-browser">
-              <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>AI assistant</b></div>
-              <img src="images/projects/pawpal/pawpal-ai.webp" alt="PawPal AI assistant interface providing pet-care guidance" width="2880" height="1800" loading="lazy" decoding="async">
-            </figure>
-          </div>
-        </section>
-
-        <section class="project-operations container" aria-labelledby="pawpal-admin-title">
-          <figure class="project-browser">
-            <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>Admin operations</b></div>
-            <img src="images/projects/pawpal/pawpal-admin.webp" alt="PawPal administrative operations dashboard" width="2880" height="1800" loading="lazy" decoding="async">
-          </figure>
-          <div class="project-operations__copy">
-            <p>Platform control</p>
-            <h3 id="pawpal-admin-title">Admin operations</h3>
-            <p>PawPal includes administrative workflows for managing the marketplace, members, content, and customer operations.</p>
-            <ul>
-              <li>Listing management</li>
-              <li>Member control</li>
-              <li>Booking operations</li>
-              <li>Articles</li>
-              <li>Notices</li>
-              <li>FAQs</li>
-            </ul>
           </div>
         </section>
 
         <section class="project-engineering" aria-labelledby="pawpal-engineering-title">
           <div class="project-engineering__inner container">
-            <div class="project-subsection-heading">
-              <p>Backend integrity</p>
-              <h3 id="pawpal-engineering-title">Engineering decisions</h3>
-            </div>
+            <h3 id="pawpal-engineering-title">Engineering decisions</h3>
             <dl class="engineering-decisions">
               <div>
                 <dt>Live member validation</dt>
@@ -399,61 +358,304 @@
           </div>
         </section>
 
-        <div class="project-technical container">
-          <section class="project-data" aria-labelledby="pawpal-data-title">
-            <div class="project-subsection-heading">
-              <p>Data layer</p>
-              <h3 id="pawpal-data-title">14 MongoDB / Mongoose collections</h3>
-            </div>
-            <p>Members form the central identity layer while marketplace, booking, community, and messaging features remain separated into domain collections.</p>
-            <ul class="domain-list" aria-label="PawPal MongoDB and Mongoose collections">
-              <li>members</li><li>listings</li><li>bookings</li><li>inquiries</li><li>board articles</li><li>comments</li><li>likes</li><li>views</li><li>follows</li><li>notifications</li><li>conversations</li><li>messages</li><li>notices</li><li>FAQs</li>
-            </ul>
-          </section>
+        <section class="pawpal-architecture container" aria-labelledby="pawpal-architecture-title">
+          <h3 id="pawpal-architecture-title">Architecture &amp; data</h3>
+          <ol class="pawpal-architecture__flow" aria-label="PawPal application and deployment flow">
+            <li>Client</li>
+            <li>nginx</li>
+            <li>Docker Compose</li>
+            <li>Next.js 14 / React · Apollo Client</li>
+            <li>NestJS · GraphQL · Mongoose</li>
+            <li>MongoDB Atlas</li>
+          </ol>
+          <p>14 MongoDB collections across marketplace, booking, community, and messaging domains.</p>
+        </section>
+      </article>
 
-          <section class="project-architecture" aria-labelledby="pawpal-architecture-title">
-            <div class="project-subsection-heading">
-              <p>System design</p>
-              <h3 id="pawpal-architecture-title">System architecture</h3>
+      <article class="venturo-case-study" aria-labelledby="venturo-title">
+        <header class="venturo-header container">
+          <div class="project-title-row">
+            <div>
+              <p class="project-identifier"><span>02</span>E-commerce</p>
+              <h2 id="venturo-title">Venturo</h2>
+              <p class="project-subtitle">Outdoor E-Commerce Platform</p>
             </div>
-            <div class="architecture-grid">
-              <div class="architecture-flow" aria-label="PawPal application request flow">
-                <h4>Application flow</h4>
-                <ol>
-                  <li>User</li>
-                  <li>Next.js 14 / React</li>
-                  <li>Apollo Client</li>
-                  <li>NestJS + GraphQL API</li>
-                  <li>Mongoose</li>
-                  <li>MongoDB Atlas</li>
-                </ol>
-              </div>
-              <div class="architecture-flow architecture-flow--infrastructure" aria-label="PawPal production infrastructure">
-                <h4>Production infrastructure</h4>
-                <ol>
-                  <li>Internet / Client</li>
-                  <li>nginx</li>
-                  <li>
-                    <strong>Docker Compose</strong>
-                    <ul>
-                      <li>Next.js frontend</li>
-                      <li>NestJS API</li>
-                      <li>PawPal batch</li>
-                    </ul>
-                  </li>
-                  <li>MongoDB Atlas</li>
-                </ol>
-              </div>
+            <div class="project-links" aria-label="Venturo project links">
+              <a class="project-link" href="https://venturo.network/" target="_blank" rel="noopener noreferrer">Live product <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+              <span class="project-link project-link--disabled" aria-disabled="true">GitHub <small>Private / pending</small></span>
             </div>
+          </div>
+        </header>
+
+        <div class="venturo-overview container">
+          <div class="venturo-overview__copy">
+            <p class="project-summary">A full-stack outdoor e-commerce platform built around product discovery, secure checkout, inventory integrity, administrative operations, and production deployment.</p>
+            <dl class="project-metadata">
+              <div>
+                <dt>Role</dt>
+                <dd>Full-Stack Development</dd>
+              </div>
+              <div>
+                <dt>Scope</dt>
+                <dd>Frontend · Backend · Commerce · Deployment</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="project-browser venturo-browser">
+            <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>venturo.network</b></div>
+            <a class="project-image-link" href="https://venturo.network/" target="_blank" rel="noopener noreferrer" aria-label="View Venturo live website (opens in a new tab)">
+              <img class="venturo-image--home" src="images/projects/venturo/venturo-home.webp" alt="Venturo outdoor e-commerce homepage" width="2880" height="1542" loading="lazy" decoding="async">
+              <span class="project-image-overlay" aria-hidden="true">
+                <strong>Venturo</strong>
+                <span>Outdoor E-Commerce</span>
+                <span class="project-image-overlay__stack">React · Express · MongoDB · PM2</span>
+                <span class="project-image-overlay__cta">View Live <span class="link-arrow">↗</span></span>
+              </span>
+            </a>
+          </figure>
+        </div>
+
+        <section class="venturo-stack container" aria-labelledby="venturo-stack-title">
+          <div class="venturo-section-heading">
+            <h3 id="venturo-stack-title">Technology</h3>
+          </div>
+          <dl>
+            <div><dt>Frontend</dt><dd>React · TypeScript · React Router · Axios · Material UI · Styled Components</dd></div>
+            <div><dt>Backend</dt><dd>Node.js · Express.js · TypeScript · REST API · MongoDB · Mongoose</dd></div>
+            <div><dt>Auth</dt><dd>JWT · Express Session · bcryptjs · Multer · Socket.IO</dd></div>
+            <div><dt>Infrastructure</dt><dd>PM2 · nginx · Linux VPS · Git · GitHub</dd></div>
+            <div><dt>Admin</dt><dd>EJS</dd></div>
+          </dl>
+        </section>
+
+        <div class="venturo-engineering container">
+        <section class="venturo-commerce" aria-labelledby="venturo-commerce-title">
+          <div class="venturo-section-heading">
+            <h3 id="venturo-commerce-title">Commerce engineering</h3>
+          </div>
+          <div class="venturo-commerce__layout">
+            <figure class="project-browser venturo-browser">
+              <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>Secure checkout</b></div>
+              <img class="venturo-image--checkout" src="images/projects/venturo/venturo-checkout.webp" alt="Venturo checkout with shipping details and server-priced order summary" width="1088" height="393" loading="lazy" decoding="async">
+            </figure>
+            <div class="venturo-decisions">
+              <article>
+                <span>01</span>
+                <h4>Server-Priced</h4>
+                <p>Backend resolves and validates pricing, rather than trusting client-submitted totals.</p>
+                <ul aria-label="Server checkout validation">
+                  <li>Product identity</li><li>Quantity</li><li>Product status</li><li>Inventory</li><li>Price</li><li>Delivery data</li>
+                </ul>
+              </article>
+              <article>
+                <span>02</span>
+                <h4>Stock-Safe</h4>
+                <p>Inventory validated before order creation; decremented only on a successful order.</p>
+                <ul>
+                  <li>Duplicate product IDs are aggregated before processing</li>
+                  <li>Requested quantities are validated against inventory</li>
+                  <li>Stock decrement is conditional</li>
+                </ul>
+              </article>
+              <article>
+                <span>03</span>
+                <h4>Atomic Order</h4>
+                <p>Order + items + inventory protected by MongoDB transaction logic to avoid partial checkout state.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+          <section class="venturo-auth" aria-labelledby="venturo-auth-title">
+            <div class="venturo-section-heading">
+              <h3 id="venturo-auth-title">Authentication &amp; access</h3>
+            </div>
+            <div class="venturo-auth__groups">
+              <section>
+                <h4>Customer</h4>
+                <p>JWT identity · bcrypt verification · live member revalidation from MongoDB. <code>BLOCK</code> / <code>DELETE</code> states are rejected.</p>
+              </section>
+              <section>
+                <h4>Admin</h4>
+                <p>Separate session-based authentication for the EJS admin interface.</p>
+              </section>
+              <section>
+                <h4>Signup</h4>
+                <p>Public signup cannot assign privileged roles.</p>
+              </section>
+            </div>
+
+          <section class="venturo-admin" aria-labelledby="venturo-admin-title">
+            <figure class="project-browser venturo-browser">
+              <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>EJS administration</b></div>
+              <img class="venturo-image--admin" src="images/projects/venturo/venturo-admin.webp" alt="Venturo EJS administration product catalog" width="1220" height="609" loading="lazy" decoding="async">
+            </figure>
+            <div class="venturo-admin__copy">
+              <div class="venturo-section-heading">
+                <h4 id="venturo-admin-title">Admin operations</h4>
+              </div>
+              <p>Product/member management runs through an EJS server-rendered administration interface.</p>
+              <ul aria-label="Venturo admin navigation">
+                <li>Overview</li><li>Products</li><li>Articles</li><li>Members</li><li>Logout</li>
+              </ul>
+            </div>
+          </section>
           </section>
         </div>
 
-        <aside class="project-note container" aria-labelledby="pawpal-filtering-title">
-          <p id="pawpal-filtering-title">Filtering implementation</p>
-          <p>The backend handles search, sorting, and pagination through GraphQL. Category and location filters are currently applied client-side to the loaded results.</p>
-        </aside>
+        <footer class="venturo-closing">
+          <div class="container">
+            <section class="venturo-runtime" aria-labelledby="venturo-runtime-title">
+              <div class="venturo-runtime__copy">
+                <div class="venturo-section-heading">
+                  <p>Deployment</p>
+                  <h3 id="venturo-runtime-title">Production runtime</h3>
+                </div>
+                <p>Linux VPS · PM2 · nginx</p>
+              </div>
+              <ol class="venturo-runtime__flow" aria-label="Venturo production request flow">
+                <li>Client</li>
+                <li>nginx</li>
+                <li>PM2</li>
+                <li>Node / Express</li>
+                <li>MongoDB</li>
+              </ol>
+            </section>
+            <p class="venturo-principle">Backend source of truth for identity, pricing, inventory, and order creation.</p>
+          </div>
+        </footer>
+      </article>
+
+      <article class="enginx-project" aria-labelledby="enginx-title">
+        <div class="enginx-layout container">
+          <header class="enginx-content">
+            <p class="project-identifier"><span>03</span>E-learning platform</p>
+            <h2 id="enginx-title">Enginx</h2>
+            <p class="project-subtitle">E-Learning Platform</p>
+            <p class="enginx-description">A role-based e-learning platform where students discover, purchase, and access structured learning content while instructors and administrators manage approved courses.</p>
+
+            <dl class="enginx-details">
+              <div>
+                <dt>Stack</dt>
+                <dd>JavaScript · EJS · jQuery · Axios · Bootstrap</dd>
+              </div>
+              <div>
+                <dt>Product flow</dt>
+                <dd>Course Discovery → Purchase → Access → Learning</dd>
+              </div>
+              <div>
+                <dt>Roles</dt>
+                <dd>Student · Instructor · Admin</dd>
+              </div>
+            </dl>
+
+            <div class="project-links" aria-label="Enginx project links">
+              <span class="project-link project-link--disabled" aria-disabled="true">GitHub <small>Private / pending</small></span>
+            </div>
+          </header>
+
+          <figure class="project-browser enginx-visual">
+            <div class="project-browser__bar" aria-hidden="true"><span></span><span></span><span></span><b>Enginx</b></div>
+            <div class="project-image-link project-image-link--preview" tabindex="0" role="group" aria-label="Enginx: E-Learning Platform. JavaScript · EJS · jQuery · Bootstrap.">
+              <img src="images/projects/enginx/enginx-home.webp" alt="Enginx role-based e-learning platform homepage" width="1190" height="834" loading="lazy" decoding="async">
+              <span class="project-image-overlay" aria-hidden="true">
+                <strong>Enginx</strong>
+                <span>E-Learning Platform</span>
+                <span class="project-image-overlay__stack">JavaScript · EJS · jQuery · Bootstrap</span>
+              </span>
+            </div>
+          </figure>
+        </div>
       </article>
     </section>
+
+    <section class="experience career-section" id="experience" aria-labelledby="experience-title" tabindex="-1">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow"><span aria-hidden="true">05</span>Experience</p>
+          <h2 id="experience-title">Professional experience</h2>
+        </header>
+
+        <div class="career-timeline">
+          <article class="career-entry">
+            <div class="career-period">
+              <p>Sep 2022 – Mar 2025</p>
+              <span>Remote</span>
+            </div>
+            <div class="career-marker" aria-hidden="true"><span></span></div>
+            <div class="career-content">
+              <h3>Full-Stack Developer — Remote</h3>
+              <p class="career-organization">TechNest Digital · Tallinn, Estonia</p>
+              <ul>
+                <li>Built and maintained full-stack applications using Next.js, NestJS, and MongoDB.</li>
+                <li>Developed and integrated REST and GraphQL APIs with reusable frontend components.</li>
+                <li>Implemented authentication and backend workflows using JWT, bcrypt, and Multer.</li>
+                <li>Worked across frontend, backend, database, and application integration throughout the development lifecycle.</li>
+                <li>Supported containerized development and production deployment using Docker, Linux, Git, and GitHub.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="education career-section" id="education" aria-labelledby="education-title" tabindex="-1">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow"><span aria-hidden="true">06</span>Education</p>
+          <h2 id="education-title">Education</h2>
+        </header>
+
+        <article class="education-entry">
+          <div>
+            <p class="education-period">2024 – 2026</p>
+            <p class="education-location">South Korea</p>
+          </div>
+          <div>
+            <h3>M.S. AI Business Engineering</h3>
+            <p class="career-organization">Seoul Media Institute of Technology (SMIT)</p>
+            <p class="education-focus">AI · NLP · Deep Learning · Data Analysis · AI-integrated Applications</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title" tabindex="-1">
+      <div class="contact-layout container">
+        <header class="contact-header">
+          <p class="section-eyebrow"><span aria-hidden="true">07</span>Contact</p>
+          <h2 id="contact-title">Let's build something useful.</h2>
+          <p class="contact-role">Full-Stack · DevOps · Agentic Engineer</p>
+          <p class="contact-intro">Building production-ready products across web, infrastructure, and AI — with a focus on clean architecture, reliable deployment, and practical business impact.</p>
+        </header>
+
+        <div class="contact-details">
+          <div class="contact-identity">
+            <p>Mukhiddin Solijonov</p>
+            <a href="mailto:mukhiddinsolijonov101@gmail.com">mukhiddinsolijonov101@gmail.com</a>
+            <a href="tel:+821099086622">+82 10-9908-6622</a>
+            <a href="https://github.com/Max-Mukhiddin" target="_blank" rel="noopener noreferrer">github.com/Max-Mukhiddin <span class="link-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          </div>
+
+          <dl class="contact-meta">
+            <div>
+              <dt>Location</dt>
+              <dd>Gyeonggi-do · South Korea</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>D-10 Visa · Available Immediately</dd>
+            </div>
+          </dl>
+        </div>
+
+        <footer class="contact-footer">
+          <p>Open to Full-Stack, DevOps, and software engineering opportunities in South Korea.</p>
+          <p>Thank you for reviewing my work.</p>
+        </footer>
+      </div>
+    </section>
   </main>
+  </div>
 </body>
 </html>

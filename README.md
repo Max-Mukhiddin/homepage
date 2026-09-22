@@ -2,11 +2,11 @@
 
 An original static portfolio for a **Full-Stack · DevOps · Agentic Engineer** based in **Gyeonggi-do · South Korea**.
 
-## Phase 4 scope
+## Current scope
 
-Responsive navigation, Home/hero, global design tokens, framed portrait photography, About, Technical Stack, and the PawPal project case study. Built with semantic HTML, CSS Grid/Flexbox, and one vanilla JavaScript module. No external fonts, scripts, frameworks, packages, or build step.
+The site uses a persistent desktop profile sidebar beside an independently scrolling portfolio. At 1024px and below, the sidebar becomes a compact sticky top bar with an accessible navigation drawer and the page returns to normal document scrolling. The page contains Home, About, Technical Stack, Projects, Experience, Education, and Contact.
 
-Venturo, Enginx, Experience, Education, and Contact are intentionally not built. Their navigation destinations remain reserved where applicable. The active-navigation indicator style is prepared; scroll tracking is deferred until more sections exist.
+Built with semantic HTML, CSS Grid/Flexbox, and one vanilla JavaScript module. No external fonts, scripts, frameworks, packages, or build step. PawPal remains the featured case study, Venturo is a secondary case study, and Enginx is a compact project entry.
 
 The original implementation and its assets are retained only in Git history (initial commit `09a8ca9`).
 
@@ -22,42 +22,63 @@ Open http://localhost:8000. Stop the server with Ctrl+C. Use an HTTP server rath
 
 ## Files
 
-- `index.html`: metadata, navigation, hero, About, Technical Stack, and PawPal case-study content.
+- `index.html`: application shell, profile sidebar, metadata, and all portfolio sections.
 - `css/variables.css`: palette, typography, spacing, sizing tokens.
 - `css/base.css`: reset, accessibility, base styles, reduced motion.
-- `css/components.css`: navigation, buttons, hero, portraits, About, Expertise, and PawPal case-study layouts.
-- `css/responsive.css`: tablet/mobile rules; navigation collapses at 1024px, hero stacks below 768px.
-- `js/main.js`: mobile menu and scroll-dependent header state.
+- `css/components.css`: desktop shell/sidebar, navigation, buttons, and all section layouts.
+- `css/responsive.css`: tablet/mobile rules; the sidebar becomes a top navigation drawer at 1024px.
+- `js/main.js`: mobile menu, container-aware section tracking and one-time reveals, anchor scrolling, manual-scroll hash replacement, and history restoration.
 - `images/profile/`: hero portrait and About working portrait.
 - `images/projects/`: original project screenshots and reserved media locations.
 - `assets/resume/`: linked resume PDF.
 
 ## Real assets
 
-Supply these files with the exact case-sensitive names:
+The site uses these case-sensitive asset paths:
 
-- `images/profile/mukhiddin-hero.webp`: loaded by the hero with meaningful alt text. A reserved 4:5 frame prevents image-driven layout shift; `object-fit: contain` preserves the entire portrait without distortion or face/shoulder cropping. Desktop width is capped at 400px; mobile width at 384px.
+- `images/profile/mukhiddin-hero.webp`: displayed in the desktop sidebar and mobile navigation drawer with meaningful alt text. Its reserved frame and intrinsic dimensions prevent layout shift. A transparent, borderless wrapper and `object-fit: cover; object-position: center top` prevent side bars without stretching the portrait.
 - `images/profile/mukhiddin-about.webp`: displayed in the About section with meaningful alt text and a reserved square frame.
 - `assets/resume/Mukhiddin-Solijonov-Resume.pdf`: the enabled resume link opens this PDF in a new tab with `noopener noreferrer`. It deliberately leaves saving to the browser PDF viewer instead of relying on a forced download.
 
-All three files are present. The hero preserves the supplied 1103 × 1426 portrait crop, while the square About image uses a restrained rectangular frame and centered cover crop. Both supplied `.webp` files contain PNG-encoded data despite their filenames. Browsers currently decode both images successfully; the original assets have been left unchanged.
+All three files are present. The hero source remains 1103 × 1426, and the About source remains 1254 × 1254. The About image stays in normal document flow. Both profile files now use actual lossless WebP encoding with decoded pixels verified identical to the supplied originals.
 
 ### PawPal media
 
-- `images/projects/pawpal/pawpal-ai.webp`: displayed in the AI assistant feature.
-- `images/projects/pawpal/pawpal-admin.webp`: displayed in the admin operations feature.
+- `images/projects/pawpal/pawpal-ai.webp`: retained source asset, currently unused.
+- `images/projects/pawpal/pawpal-admin.webp`: retained source asset, currently unused; there is no PawPal Admin Operations subsection.
 - `images/projects/pawpal/pawpal-home.png`: displayed as the dominant project overview visual.
-- `images/projects/pawpal/pawpal-services.webp`: available but unused in this phase.
+- `images/projects/pawpal/pawpal-services.webp`: available but currently unused.
 
-The supplied PawPal files with `.webp` extensions currently contain PNG-encoded image data. Browsers decode the used assets successfully; the originals remain unchanged.
+The homepage PNG was losslessly compressed without changing dimensions or decoded pixels. The unused source files retain their supplied encoding and are not requested by the page.
 
-The final public portfolio URL and an original social-preview image are still needed for `og:url` and `og:image`; their placeholders remain HTML comments.
+### Venturo media
+
+- `images/projects/venturo/venturo-home.webp`: displayed in the project overview.
+- `images/projects/venturo/venturo-checkout.webp`: displayed with the checkout engineering story.
+- `images/projects/venturo/venturo-admin.webp`: displayed with the EJS administration section.
+
+All three Venturo files now use actual lossless WebP encoding. Their source dimensions and decoded pixels are preserved. The overview screenshot links to the live product; checkout and admin screenshots remain unobstructed supporting visuals.
+
+### Enginx media
+
+- `images/projects/enginx/enginx-home.webp`: displayed as the single overview visual in the compact Enginx entry.
+
+The Enginx file now uses actual lossless WebP encoding, preserving its 1190 × 834 dimensions and decoded pixels. Its focusable preview has no CTA because no repository or live URL has been verified.
+
+The final GitHub Pages URL and an original social-preview image are still needed for the canonical URL, `og:url`, and absolute `og:image`. The document head records this intentionally deferred metadata in a comment.
+
+All seven displayed images retain intrinsic dimensions and meaningful alt text; images below Home load lazily. Lossless optimization reduced their combined size from 14,420,015 to 9,929,663 bytes. No screenshot or portrait pixels were changed.
+
+## Accessibility and motion
+
+Keyboard focus exposes the same tag and screenshot states as hover. Overlays contain only information also available in the page; pending repository labels remain non-interactive. Reveals run once, using the desktop content pane or mobile viewport as appropriate. Reduced motion immediately exposes content and disables movement. With JavaScript unavailable, content remains visible and the mobile navigation occupies normal document flow instead of covering the page.
 
 ## Confirmed links
 
 - GitHub: https://github.com/Max-Mukhiddin
 - Email: mukhiddinsolijonov101@gmail.com
 - PawPal live product: https://pawpall.online
+- Venturo live product: https://venturo.network/
 
 ## Deployment
 
