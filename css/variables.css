@@ -6,6 +6,11 @@
   --muted: #69716c;
   --green: #18392f;
   --green-light: #d8e3d9;
+  --sidebar-bg: #e7ecef;
+  --sidebar-text: #1f2b34;
+  --sidebar-muted: #65737d;
+  --sidebar-line: #cbd4d9;
+  --sidebar-accent: #315f7a;
   --white: #fff;
   --line: rgba(23, 32, 29, .17);
   --sidebar-width: 20.5rem;

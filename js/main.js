@@ -8,6 +8,8 @@ const mobileQuery = window.matchMedia('(max-width: 64rem)');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 const sections = navLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
+let hashTargetId = null;
+let hashNavigationTimer;
 
 function setMenu(open, returnFocus = false) {
   toggle.setAttribute('aria-expanded', String(open));
@@ -17,6 +19,27 @@ function setMenu(open, returnFocus = false) {
 }
 
 toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+
+function setActiveSection(id) {
+  navLinks.forEach((link) => {
+    if (link.hash === `#${id}`) link.setAttribute('aria-current', 'true');
+    else link.removeAttribute('aria-current');
+  });
+}
+
+function beginHashNavigation(id) {
+  hashTargetId = id;
+  clearTimeout(hashNavigationTimer);
+  hashNavigationTimer = setTimeout(() => {
+    hashTargetId = null;
+    scheduleActiveNav();
+  }, 2400);
+}
+
+function cancelHashNavigation() {
+  clearTimeout(hashNavigationTimer);
+  hashTargetId = null;
+}
 
 document.addEventListener('click', (event) => {
   const anchor = event.target.closest('a[href^="#"]');
@@ -28,14 +51,24 @@ document.addEventListener('click', (event) => {
   const target = document.querySelector(anchor.hash);
   if (!target) return;
   event.preventDefault();
+  beginHashNavigation(target.id);
+  if (location.hash !== anchor.hash) history.pushState(null, '', anchor.hash);
   target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
-  history.replaceState(null, '', anchor.hash);
+  setActiveSection(target.id);
   if (mobileQuery.matches) setMenu(false);
 });
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setMenu(false, true);
+  if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)
+      && !event.target.closest('input, textarea, select, [contenteditable="true"]')) {
+    cancelHashNavigation();
+  }
 });
+
+window.addEventListener('wheel', cancelHashNavigation, { passive: true });
+window.addEventListener('touchstart', cancelHashNavigation, { passive: true });
+window.addEventListener('pointerdown', cancelHashNavigation, { passive: true });
 
 mobileQuery.addEventListener('change', () => setMenu(false));
 
@@ -50,10 +83,22 @@ function updateActiveNav() {
     if (section.getBoundingClientRect().top <= marker) active = section;
   });
 
-  navLinks.forEach((link) => {
-    if (link.hash === `#${active.id}`) link.setAttribute('aria-current', 'true');
-    else link.removeAttribute('aria-current');
-  });
+  setActiveSection(active.id);
+
+  if (hashTargetId) {
+    const scrollMargin = mobileQuery.matches
+      ? Number.parseFloat(getComputedStyle(active).scrollMarginTop) || 0
+      : 0;
+    if (active.id === hashTargetId
+        && Math.abs(active.getBoundingClientRect().top - rootTop - scrollMargin) < 8) {
+      cancelHashNavigation();
+    }
+    return;
+  }
+
+  if (location.hash !== `#${active.id}`) {
+    history.replaceState(null, '', `#${active.id}`);
+  }
 }
 
 function scheduleActiveNav() {
@@ -63,6 +108,14 @@ function scheduleActiveNav() {
 content.addEventListener('scroll', scheduleActiveNav, { passive: true });
 window.addEventListener('scroll', scheduleActiveNav, { passive: true });
 window.addEventListener('resize', scheduleActiveNav, { passive: true });
+
+window.addEventListener('popstate', () => {
+  const target = document.querySelector(location.hash || '#home');
+  if (!target) return;
+  beginHashNavigation(target.id);
+  target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+  setActiveSection(target.id);
+});
 
 let revealObserver;
 function setupReveals() {
@@ -96,7 +149,24 @@ mobileQuery.addEventListener('change', setupReveals);
 reducedMotion.addEventListener('change', setupReveals);
 
 requestAnimationFrame(() => {
-  if (location.hash) document.querySelector(location.hash)?.scrollIntoView({ block: 'start' });
-  updateActiveNav();
+  const initialTarget = document.querySelector(location.hash || '#home');
+  if (initialTarget) {
+    beginHashNavigation(initialTarget.id);
+    initialTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+    setActiveSection(initialTarget.id);
+    requestAnimationFrame(() => {
+      initialTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
+      scheduleActiveNav();
+    });
+  } else {
+    updateActiveNav();
+  }
   setupReveals();
+});
+
+window.addEventListener('load', () => {
+  if (!hashTargetId) return;
+  const target = document.getElementById(hashTargetId);
+  target?.scrollIntoView({ behavior: 'instant', block: 'start' });
+  scheduleActiveNav();
 });
