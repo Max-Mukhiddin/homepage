@@ -4,7 +4,7 @@ An original static portfolio for a **Full-Stack · DevOps · Agentic Engineer** 
 
 ## Current scope
 
-The site uses a persistent desktop profile sidebar beside an independently scrolling portfolio. At 1024px and below, the sidebar becomes a compact sticky top bar with an accessible navigation drawer and the page returns to normal document scrolling. The page contains Home, About, Technical Stack, Projects, Experience, Education, and Contact.
+The site uses a persistent desktop profile sidebar beside an independently scrolling portfolio. At 1024px and below, the sidebar becomes a compact sticky top bar with an accessible navigation drawer and the page returns to normal document scrolling. The page contains Home, About, Skills, Projects, Strength, Career, Education, and Contact.
 
 Built with semantic HTML, CSS Grid/Flexbox, and one vanilla JavaScript module. No external fonts, scripts, frameworks, packages, or build step. PawPal remains the featured case study, Venturo is a secondary case study, and Enginx is a compact project entry.
 
@@ -27,7 +27,7 @@ Open http://localhost:8000. Stop the server with Ctrl+C. Use an HTTP server rath
 - `css/base.css`: reset, accessibility, base styles, reduced motion.
 - `css/components.css`: desktop shell/sidebar, navigation, buttons, and all section layouts.
 - `css/responsive.css`: tablet/mobile rules; the sidebar becomes a top navigation drawer at 1024px.
-- `js/main.js`: mobile menu, container-aware section tracking and one-time reveals, anchor scrolling, manual-scroll hash replacement, and history restoration.
+- `js/main.js`: mobile menu, container-aware active section tracking, smooth anchor navigation, and one-time IntersectionObserver reveals.
 - `images/profile/`: hero portrait and About working portrait.
 - `images/projects/`: original project screenshots and reserved media locations.
 - `assets/resume/`: linked resume PDF.
@@ -44,12 +44,12 @@ All three files are present. The hero source remains 1103 × 1426, and the About
 
 ### PawPal media
 
-- `images/projects/pawpal/pawpal-ai.webp`: retained source asset, currently unused.
-- `images/projects/pawpal/pawpal-admin.webp`: retained source asset, currently unused; there is no PawPal Admin Operations subsection.
+- `images/projects/pawpal/pawpal-ai.webp`: displayed in the compact PawPal gallery.
+- `images/projects/pawpal/pawpal-admin.webp`: displayed in the compact PawPal gallery.
 - `images/projects/pawpal/pawpal-home.png`: displayed as the dominant project overview visual.
-- `images/projects/pawpal/pawpal-services.webp`: available but currently unused.
+- `images/projects/pawpal/pawpal-services.webp`: displayed in the compact PawPal gallery.
 
-The homepage PNG was losslessly compressed without changing dimensions or decoded pixels. The unused source files retain their supplied encoding and are not requested by the page.
+The homepage PNG was losslessly compressed without changing dimensions or decoded pixels. Supporting screenshots retain their supplied encoding.
 
 ### Venturo media
 
@@ -65,13 +65,13 @@ All three Venturo files now use actual lossless WebP encoding. Their source dime
 
 The Enginx file now uses actual lossless WebP encoding, preserving its 1190 × 834 dimensions and decoded pixels. Its focusable preview has no CTA because no repository or live URL has been verified.
 
-The final GitHub Pages URL and an original social-preview image are still needed for the canonical URL, `og:url`, and absolute `og:image`. The document head records this intentionally deferred metadata in a comment.
+The production URL is https://max-mukhiddin.github.io/homepage/. The canonical URL and `og:url` use this exact project-site URL. An original social-preview image is still needed before adding absolute `og:image` metadata.
 
-All seven displayed images retain intrinsic dimensions and meaningful alt text; images below Home load lazily. Lossless optimization reduced their combined size from 14,420,015 to 9,929,663 bytes. No screenshot or portrait pixels were changed.
+All ten displayed images retain intrinsic dimensions and meaningful alt text; images below Home load lazily. No screenshot or portrait pixels were changed in this refactor.
 
 ## Accessibility and motion
 
-Keyboard focus exposes the same tag and screenshot states as hover. Overlays contain only information also available in the page; pending repository labels remain non-interactive. Reveals run once, using the desktop content pane or mobile viewport as appropriate. Reduced motion immediately exposes content and disables movement. With JavaScript unavailable, content remains visible and the mobile navigation occupies normal document flow instead of covering the page.
+Interactive screenshot links expose the same overlay states to keyboard focus as hover. Overlays contain only information also available in the page. Reveals run once, using the desktop content pane or mobile viewport as appropriate. Reduced motion immediately exposes content and disables movement. With JavaScript unavailable, content remains visible and the mobile navigation remains available.
 
 ## Confirmed links
 
