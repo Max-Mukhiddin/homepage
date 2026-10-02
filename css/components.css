@@ -88,6 +88,8 @@
 .project-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem 2rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .72rem; line-height: 1.55; }
 .project-points li { position: relative; padding-left: 1rem; }
 .project-points li::before { position: absolute; left: 0; color: var(--accent); content: "—"; }
+.project-image { width: 100%; aspect-ratio: 8 / 5; margin-top: 2.2rem; overflow: hidden; border: 1px solid var(--line); background: var(--paper-cool); }
+.project-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
 .strength { background: var(--accent-light); }
 .strength-list { border-top: 1px solid var(--line); }
@@ -98,6 +100,7 @@
 .strength-item > p:last-child { color: #56645f; font-size: .84rem; line-height: 1.75; }
 
 .career { background: var(--paper); }
+.career-total { margin-top: 1.5rem; color: var(--accent); font-size: .67rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .career-list { border-top: 1px solid var(--line); }
 .career-entry { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); padding: clamp(3rem, 5vw, 4.5rem) 0; border-bottom: 1px solid var(--line); }
 .career-period { display: grid; align-content: start; gap: .25rem; padding-top: .35rem; color: var(--muted); font-size: .62rem; letter-spacing: .08em; line-height: 1.45; text-transform: uppercase; }
