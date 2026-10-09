@@ -1,0 +1,15 @@
+# Private recovery and local review materials
+.migration-backup/
+verification/
+MIGRATION_REPORT.md
+REFINEMENT_REPORT.md
+
+# Local metadata, credentials, and tooling state
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+.aws/
+.codex/
+.agents/
